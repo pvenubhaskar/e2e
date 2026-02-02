@@ -4,7 +4,7 @@
   <artifactId>ParallelTestArt</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <properties>
-	<java.version>11</java.version>
+	<java.version>17</java.version>
   </properties>
   <dependencies>
   	<dependency>
@@ -49,8 +49,7 @@
 	        <plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.13.0</version>
-					
+					<version>3.13.0</version>					
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
