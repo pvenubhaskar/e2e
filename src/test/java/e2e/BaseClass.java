@@ -12,6 +12,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -35,10 +36,11 @@ public class BaseClass {
 	        String browser = prop.getProperty("browser");
 	        reader.close();
 	        WebDriverManager.chromedriver().create();
-	        
+	        ChromeOptions chromeOptions = new ChromeOptions();
+	        chromeOptions.setBrowserVersion("144");
 	        switch (browser.toLowerCase()) {
 	            case "chrome":
-	                driver = new ChromeDriver();
+	                driver = new ChromeDriver(chromeOptions);
 	                driver.manage().window().maximize();
 	                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	                driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
