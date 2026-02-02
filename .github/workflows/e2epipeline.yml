@@ -9,7 +9,7 @@ jobs:
       - name: step1
         uses: actions/checkout@v2
       - name: step1.1
-        uses: browser-actions/setup-chrome@v
+        uses: browser-actions/setup-chrome@v1
         with:
           chrome-version: 105
       - name: setup
