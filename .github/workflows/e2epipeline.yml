@@ -11,7 +11,8 @@ jobs:
       - name: step1.1
         uses: browser-actions/setup-chrome@v1
         with:
-          chrome-version: 144.0.7559.109
+          install-chromedriver: true
+          install-dependencies: true
       - name: setup
         uses: actions/setup-java@v1
         with:
