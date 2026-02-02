@@ -36,12 +36,12 @@ public class BaseClass {
 	        String browser = prop.getProperty("browser");
 	        reader.close();
 	        
-	        ChromeOptions chromeOptions = new ChromeOptions();
-	        chromeOptions.setBrowserVersion("144");
-			WebDriverManager.chromedriver().create();
+	        //ChromeOptions chromeOptions = new ChromeOptions();
+	        //chromeOptions.setBrowserVersion("144");
+			//WebDriverManager.chromedriver().create();
 	        switch (browser.toLowerCase()) {
 	            case "chrome":
-	                driver = new ChromeDriver(chromeOptions);
+	                driver = new ChromeDriver();
 	                driver.manage().window().maximize();
 	                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	                driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
