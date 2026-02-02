@@ -1,0 +1,21 @@
+name: Github action
+on: 
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1
+        uses: actions/checkout@v2
+      - name: setup
+        uses: actions/setup-java@v1
+        with:
+          java-version: 17
+      - name: step3               
+        run: mvn clean test --file pom.xml
+      - name: step4
+        run:
+          cd target
+          ls -a    
+        
