@@ -35,7 +35,7 @@ public class BaseClass {
 	        prop.load(reader);
 	        String browser = prop.getProperty("browser");
 	        reader.close();
-	        WebDriverManager.chromedriver().create();
+	        //WebDriverManager.chromedriver().create();
 	        ChromeOptions chromeOptions = new ChromeOptions();
 	        chromeOptions.setBrowserVersion("144");
 	        switch (browser.toLowerCase()) {
