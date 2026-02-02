@@ -5,7 +5,7 @@
 
 <parameter name="os" value="mac"></parameter>
 <parameter name="browser" value="firefox"></parameter>
-  <test name="E2E Test">
+  <test name="E2E Test">  
     <classes>
        <class name="e2e.TestLogin"/>
     </classes>
